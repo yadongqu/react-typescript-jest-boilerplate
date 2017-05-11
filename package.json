@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server"
+  },
   "dependencies": {
     "@types/react": "^15.0.23",
     "@types/react-dom": "^15.5.0",
@@ -15,7 +18,9 @@
     "jest": "^19.0.2",
     "source-map-loader": "^0.2.1",
     "ts-jest": "^19.0.14",
-    "typescript": "^2.3.2"
+    "typescript": "^2.3.2",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
   },
   "jest": {
     "transform": {
