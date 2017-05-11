@@ -1,11 +1,20 @@
 import * as React from "react";
-
-export interface HelloProps { compiler: string; framework: string; }
+import Container from "./Container";
+import {isMobile} from "../utils/Utils";
 
 // 'HelloProps' describes the shape of props.
 // State is never set so we use the 'undefined' type.
-export class App extends React.Component<HelloProps, undefined> {
+
+
+export class App extends React.Component<undefined, undefined> {
+    constructor(){
+        super();
+    }
     render() {
-        return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
+        let dev = "desktop"
+        if (isMobile.any()){
+            dev = "mobile"
+        }
+        return <Container device={dev}/>;
     }
 }
